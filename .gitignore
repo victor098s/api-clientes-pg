@@ -1,0 +1,16 @@
+# Dependências
+node_modules/
+
+# Variáveis de Ambiente (NUNCA commitar!)
+.env
+
+# Arquivos de banco SQLite
+*.sqlite
+*.sqlite3
+
+# Logs
+*.log
+
+# Sistema Operacional
+.DS_Store
+Thumbs.db
