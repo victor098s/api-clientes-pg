@@ -118,7 +118,7 @@ async function deletar(id) {
 }
 
 // ============================================================
-// FUNÇÃO: buscarPorCategoria
+// FUNÇÃO: buscarPorNome
 // DESCRIÇÃO: Filtra clientes por categoria
 // PARÂMETRO: categoria (string)
 // RETORNO: Promise com array de clientes
@@ -126,7 +126,7 @@ async function deletar(id) {
 async function buscarPorNome(nome) {
   // ILIKE é o LIKE case-insensitive do PostgreSQL
   // (no SQLite usávamos LIKE normal)
-  const sql = "SELECT * FROM clientes WHERE categoria ILIKE $1";
+  const sql = "SELECT * FROM clientes WHERE nome ILIKE $1";
 
   const result = await pool.query(
     sql,

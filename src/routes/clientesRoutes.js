@@ -10,13 +10,13 @@ const ClienteController = require('../controllers/clienteController');
 // ============================================================
 
 // GET /clientes - Listar todos os clientes
-router.get('/', ClienteController.listarTodos);
+router.get('/clientes', ClienteController.listarTodos);
 
-// GET /clientes/categoria/:categoria - Buscar por categoria
-router.get('/nome/:nome', ClienteController.buscarPorCategoria);
+// GET /clientes/categoria/:categoria - Buscar por nome
+router.get('/clientes/nome/:nome', ClienteController.buscarPorNome);
 
 // GET /clientes/:id - Buscar cliente específico por ID
-router.get('/:id', ClienteController.buscarPorId);
+router.get('/clientes/:id', ClienteController.buscarPorId);
 
 // POST /Clientes - Criar novo cliente
 router.post('/clientes', ClienteController.criar);
@@ -25,7 +25,7 @@ router.post('/clientes', ClienteController.criar);
 router.put('/clientes/:id', ClienteController.atualizar);
 
 // DELETE /clientes/:id - Deletar cliente
-router.delete('/:id', ClienteController.deletar);
+router.delete('/clientes/:id', ClienteController.deletar);
 
 // ============================================================
 // EXPORTAR O ROUTER

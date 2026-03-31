@@ -191,17 +191,17 @@ async function deletar(req, res) {
 }
 
 // ============================================================
-// FUNÇÃO: buscarPorCategoria (ASSÍNCRONA)
+// FUNÇÃO: buscarPorNome (ASSÍNCRONA)
 // ROTA: GET /clientes/categoria/:categoria
 // ============================================================
-async function buscarPorCategoria(req, res) {
+async function buscarPorNome(req, res) {
   try {
-    const { categoria } = req.params;
-    const clientes = await ClienteModel.buscarPorCategoria(categoria);
+    const { nome } = req.params;
+    const clientes = await ClienteModel.buscarPorNome(nome);
     res.status(200).json(clientes);
   } catch (erro) {
     res.status(500).json({
-      mensagem: "Erro ao buscar cliente por categoria",
+      mensagem: "Erro ao buscar cliente por nome",
       erro: erro.message,
     });
   }
@@ -216,5 +216,5 @@ module.exports = {
   criar,
   atualizar,
   deletar,
-  buscarPorCategoria,
+  buscarPorNome,
 };
