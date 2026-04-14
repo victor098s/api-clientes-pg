@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(150deg, #262626, #2e2e2e, #343131);
+  color: #f0f0f0;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form-group {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.form-group input {
+  height: 40px;
+  width: 280px;
+  border-radius: 8px;
+  padding-left: 8px;
+  margin: 0px 0px 20px 0px;
+  border: 2px solid #2f89e3;
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-success {
+  width: 137px;
+  height: 40px;
+  background-color: #006cd7;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.1);
+  color: #f0f0f0;
+  transition:
+    transform 0.3s,
+    background-color 0.3s;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+  transform: translateY(-5px);
+  background-color: #004992;
+}
+
+select {
+  width: 130px;
+  height: 40px;
+  border-radius: 8px;
+  border: 2px solid #49a1ff;
+}
+
+input {
+  width: 170px;
+  height: 40px;
+  border-radius: 8px;
+  border: 2px solid #49a1ff;
+}
+
+.search-box{
+  display: flex;
+  gap: 15px;
+}
+
+.list-section {
+  background-color: #f1f1f1;
+  height: 500px;
+  border-radius: 8px;
+  color: #262626;
+  padding: 20px;
+  margin-top: 2rem;
+  width: 1300px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.clients-table-container {
+  background-color: #e8dfdf;
+  height: 300px;
+  width: 1200px;
+  border-radius: 8px;
+  color: #262626;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  padding-top: 18px;
+}
+
+.clients-table-container th,
+td {
+  text-align: left;
+}
+
+.clients-table-container th {
+  background-color: #c1c1c1;
+  padding-left: 1rem;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.clients-table-container td {
+  padding-left: 1rem;
+}
+
+/* ============================================= */
+/* Estilos ADICIONAIS para os novos campos       */
+/* Adicione ao final do seu style.css existente  */
+/* ============================================= */
+
+/* Linha de formulário com múltiplos campos lado a lado */
+.form-row {
+  display: flex; /* Ativa o layout flexível */
+  gap: 15px; /* Espaço entre os campos  */
+  flex-wrap: wrap; /* Em telas pequenas, empilha */
+  flex-direction: column;
+}
+
+/* Proporção dos campos dentro do form-row */
+.flex-1 {
+  flex: 1;
+} /* Ocupa 1 parte do espaço */
+.flex-2 {
+  flex: 2;
+} /* Ocupa 2 partes do espaço */
+.flex-3 {
+  flex: 3;
+} /* Ocupa 3 partes do espaço */
+
+/* Dentro do form-row, o form-group não tem margin-bottom */
+.form-row .form-group {
+  margin-bottom: 0;
+}
+
+.list-controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* .btn-success,
+.btnRecarregar {
+  width: 137px;
+  height: 40px;
+  background-color: #006cd7;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.1);
+  color: #f0f0f0;
+  transition:
+    transform 0.3s,
+    background-color 0.3s;
+}
+
+.btn-sucess:hover,
+.btnRecarregar:hover {
+  transform: translateY(-5px);
+  background-color: #004992;
+} */
+
+.modal-message {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+}
+
+footer {
+  text-align: center;
+  background-color: #0c0c0c;
+  padding: 1rem;
+}
+
+header {
+  margin-left: 1rem;
+}
+
+/* Responsividade: em telas menores, empilha tudo */
+@media (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+  }
+}
